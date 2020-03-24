@@ -1,0 +1,393 @@
+* HMG-IDE UNICODE Form Designer Generated Code
+* (c) Roberto Lopez - http://sites.google.com/site/hmgweb
+
+DEFINE WINDOW TEMPLATE AT 180 , 404 WIDTH 533 HEIGHT 498 VIRTUAL WIDTH Nil VIRTUAL HEIGHT Nil TITLE "SinanTool - versão beta" ICON NIL MAIN NOMAXIMIZE NOSIZE CURSOR NIL ON INIT main_form_oninit() ON RELEASE Nil ON INTERACTIVECLOSE Nil ON MOUSECLICK Nil ON MOUSEDRAG Nil ON MOUSEMOVE Nil ON SIZE Nil ON MAXIMIZE Nil ON MINIMIZE Nil ON PAINT Nil BACKCOLOR Nil NOTIFYICON NIL NOTIFYTOOLTIP NIL ON NOTIFYCLICK Nil ON GOTFOCUS Nil ON LOSTFOCUS Nil ON SCROLLUP Nil ON SCROLLDOWN Nil ON SCROLLLEFT Nil ON SCROLLRIGHT Nil ON HSCROLLBOX Nil ON VSCROLLBOX Nil
+
+    DEFINE MAIN MENU
+        DEFINE POPUP "Menu"
+            MENUITEM "Sobre" ACTION about()
+            MENUITEM "Sair" ACTION Main.Release()
+        END POPUP
+    END MENU
+
+    DEFINE TAB Tab_1 AT 10 , 10 WIDTH 500 HEIGHT 420 VALUE 1 FONT "Arial" SIZE 9 TOOLTIP "" ON CHANGE Nil
+
+        PAGE "Criação de campos decodificados"
+
+            DEFINE BUTTON Button_1
+                ROW    120
+                COL    20
+                WIDTH  80
+                HEIGHT 30
+                ACTION main_button_1_action()
+                CAPTION "Selecionar"
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                HELPID Nil
+                FLAT .F.
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .T.
+                MULTILINE .F.
+                PICTURE Nil
+                PICTALIGNMENT TOP
+            END BUTTON
+
+            DEFINE FRAME Frame_1
+                ROW    100
+                COL    10
+                WIDTH  480
+                HEIGHT 60
+                FONTNAME "Arial"
+                FONTSIZE 9
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                CAPTION "Selecione o arquivo que será utilizado."
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                OPAQUE .T.
+            END FRAME
+
+            DEFINE FRAME Frame_2
+                ROW    170
+                COL    10
+                WIDTH  480
+                HEIGHT 130
+                FONTNAME "Arial"
+                FONTSIZE 9
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                CAPTION "Selecione o campo a ser decodificado."
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                OPAQUE .T.
+            END FRAME
+
+            DEFINE CHECKBOX Check_1
+                ROW    190
+                COL    20
+                WIDTH  160
+                HEIGHT 20
+                CAPTION "Município de notificação"
+                VALUE .F.
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                ONCHANGE main_check_1_onchange()
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                HELPID Nil
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+            END CHECKBOX
+
+            DEFINE CHECKBOX Check_2
+                ROW    210
+                COL    20
+                WIDTH  210
+                HEIGHT 20
+                CAPTION "Regional município de notificação"
+                VALUE .F.
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                ONCHANGE Nil
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                HELPID Nil
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+            END CHECKBOX
+
+            DEFINE CHECKBOX Check_3
+                ROW    230
+                COL    20
+                WIDTH  280
+                HEIGHT 20
+                CAPTION "Unidade de saúde do município de notificação"
+                VALUE .F.
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                ONCHANGE Nil
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                HELPID Nil
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+            END CHECKBOX
+
+            DEFINE CHECKBOX Check_4
+                ROW    250
+                COL    20
+                WIDTH  150
+                HEIGHT 20
+                CAPTION "Município de residência"
+                VALUE .F.
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                ONCHANGE Nil
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                HELPID Nil
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+            END CHECKBOX
+
+            DEFINE FRAME Frame_3
+                ROW    310
+                COL    10
+                WIDTH  480
+                HEIGHT 60
+                FONTNAME "Arial"
+                FONTSIZE 9
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                CAPTION "Selecione um nome e um local para salvar o arquivo de saída."
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                OPAQUE .T.
+            END FRAME
+
+            DEFINE BUTTON Button_2
+                ROW    330
+                COL    20
+                WIDTH  80
+                HEIGHT 30
+                ACTION main_button_2_action()
+                CAPTION "Selecionar"
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                HELPID Nil
+                FLAT .F.
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+                MULTILINE .F.
+                PICTURE Nil
+                PICTALIGNMENT TOP
+            END BUTTON
+
+            DEFINE LABEL Label_1
+                ROW    130
+                COL    110
+                WIDTH  360
+                HEIGHT 20
+                VALUE ""
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                HELPID Nil
+                VISIBLE .T.
+                TRANSPARENT .F.
+                ACTION Nil
+                AUTOSIZE .F.
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+            END LABEL
+
+            DEFINE FRAME Frame_4
+                ROW    30
+                COL    10
+                WIDTH  230
+                HEIGHT 60
+                FONTNAME "Arial"
+                FONTSIZE 9
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                CAPTION "Selecione o tipo de arquivo."
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                OPAQUE .T.
+            END FRAME
+
+            DEFINE COMBOBOX Combo_1
+                ROW    50
+                COL    20
+                WIDTH  210
+                HEIGHT 20
+                ITEMS {"nindinet.dbf"}
+                VALUE 0
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                ONCHANGE main_combo_1_onchange()
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                HELPID Nil
+                TABSTOP .T.
+                VISIBLE .T.
+                SORT .F.
+                ONENTER Nil
+                ONDISPLAYCHANGE Nil
+                DISPLAYEDIT .F.
+                IMAGE Nil
+                DROPPEDWIDTH Nil
+                ONDROPDOWN Nil
+                ONCLOSEUP Nil
+            END COMBOBOX
+
+            DEFINE BUTTON Button_3
+                ROW    380
+                COL    10
+                WIDTH  100
+                HEIGHT 28
+                ACTION main_button_3_action()
+                CAPTION "Cancelar"
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                HELPID Nil
+                FLAT .F.
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+                MULTILINE .F.
+                PICTURE Nil
+                PICTALIGNMENT TOP
+            END BUTTON
+
+            DEFINE BUTTON Button_4
+                ROW    380
+                COL    130
+                WIDTH  100
+                HEIGHT 28
+                ACTION main_button_4_action()
+                CAPTION "Ok"
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                HELPID Nil
+                FLAT .F.
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+                MULTILINE .F.
+                PICTURE Nil
+                PICTALIGNMENT TOP
+            END BUTTON
+
+            DEFINE CHECKBOX Check_5
+                ROW    270
+                COL    20
+                WIDTH  210
+                HEIGHT 20
+                CAPTION "Regional município de residência"
+                VALUE .F.
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                ONCHANGE Nil
+                ONGOTFOCUS Nil
+                ONLOSTFOCUS Nil
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+                HELPID Nil
+                TABSTOP .T.
+                VISIBLE .T.
+                TRANSPARENT .F.
+            END CHECKBOX
+
+            DEFINE LABEL Label_2
+                ROW    340
+                COL    110
+                WIDTH  360
+                HEIGHT 20
+                VALUE ""
+                FONTNAME "Arial"
+                FONTSIZE 9
+                TOOLTIP ""
+                FONTBOLD .F.
+                FONTITALIC .F.
+                FONTUNDERLINE .F.
+                FONTSTRIKEOUT .F.
+                HELPID Nil
+                VISIBLE .T.
+                TRANSPARENT .F.
+                ACTION Nil
+                AUTOSIZE .F.
+                BACKCOLOR NIL
+                FONTCOLOR NIL
+            END LABEL
+
+        END PAGE 
+
+    END TAB 
+
+END WINDOW
+
